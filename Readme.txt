@@ -1,179 +1,178 @@
-Brief créatif
-Création du site Ohmyfood Paris
+# Ohmyfood
 
-Ohmyfood
+Projet 3 réalisé dans le cadre de la formation **Intégrateur Web d’OpenClassrooms**.
 
-1
+L’objectif était d’intégrer en mobile first le site d’**Ohmyfood**, une entreprise fictive de réservation de menus gastronomiques, puis d’enrichir l’interface avec des animations CSS réalisées sans JavaScript.
 
-_____________________________________________________________________________________________
+## Présentation du projet
 
-Sommaire
-Marque 3
-Identité 3
-Proposition 3
-Positionnement 3
-Concurrence 3
-Cible 4
-Identité graphique 4
-Enjeux 4
-Problématique 4
-Fonctionnement 4
-Budget 4
-Planning 4
-Technologies 5
-Compatibilité 5
-Livrables attendus 5
-Contenu des pages 5
-Effets graphiques et animations 5
+Ohmyfood permet aux utilisateurs de découvrir une sélection de restaurants parisiens et de consulter leur menu avant leur arrivée.
 
-2
+Cette première version du site comprend :
 
-_____________________________________________________________________________________________
+- une page d’accueil présentant le fonctionnement du service ;
+- une sélection de quatre restaurants ;
+- une page de menu dédiée à chaque restaurant ;
+- une interface responsive adaptée aux mobiles, tablettes et ordinateurs ;
+- plusieurs animations et transitions réalisées uniquement avec CSS et Sass.
 
-Marque
-Identité
-Ohmyfood est une entreprise de commande de repas en ligne. Notre concept permet aux
-utilisateurs de composer leur propre menu et de réduire leur temps d’attente dans les
-restaurants, car leur menu est préparé à l’avance. Plus de perte de temps à consulter la
-carte !
+## Restaurants présentés
 
-Proposition
-Nous souhaitons proposer à nos clients les menus de restaurants gastronomiques. Après
-l’avoir développé à New-York dans un premier temps, nous souhaitons désormais élargir
-notre concept à la capitale de la gastronomie : Paris.
+- **La palette du goût**
+- **La note enchantée**
+- **À la française**
+- **Le délice des sens**
 
-Positionnement
-Nous nous positionnons sur un marché de niche, avec les restaurants luxueux des villes
-dans lesquelles nous sommes établis. Nous souhaitons être identifiés comme une
-entreprise proposant des services haut de gamme.
+Chaque page présente les entrées, les plats et les desserts du restaurant, ainsi qu’un bouton de commande.
 
+## Travail réalisé
 
-3
+- intégration des maquettes avec une approche mobile first ;
+- création de la page d’accueil et des quatre pages de menu ;
+- mise en place d’une navigation entre les différentes pages ;
+- adaptation de l’affichage aux écrans plus larges avec des media queries ;
+- organisation des styles dans plusieurs fichiers Sass ;
+- utilisation de variables pour les couleurs, les polices, les tailles et les ombres ;
+- compilation du code SCSS dans une feuille de style CSS ;
+- intégration d’animations et de transitions sans JavaScript ;
+- utilisation d’une convention de nommage inspirée de BEM.
 
-_____________________________________________________________________________________________
+## Animations et interactions
 
+### Écran de chargement
 
-Cible
-Classes moyennes et supérieures, connectées et souvent pressées, souhaitant déguster des
-produits de qualité.
+Un loader recouvre temporairement la page d’accueil lors de son ouverture. Il combine :
 
-Identité graphique
+- une animation de rotation ;
+- un masque couvrant l’intégralité de l’écran ;
+- une disparition automatique après le chargement.
 
-Polices
-Logo et titres : Shrikhand
-Texte : Roboto
+### Boutons principaux
 
-Couleurs
-Primaire Secondaire Tertiaire
-#9356DC #FF79DA #99E2D0
+Les boutons utilisent un dégradé reprenant les couleurs principales de l’identité graphique. Leur apparence s’éclaircit au survol grâce aux fonctions de couleur Sass.
 
-Enjeux
+### Boutons « J’aime »
 
-Problématique
+Les cœurs présents sur les cartes et les pages de restaurant peuvent être activés. Le remplissage coloré apparaît progressivement grâce à une transition CSS.
 
-Nous souhaitons ouvrir nos services à la capitale française.
-Objectifs
+### Apparition des menus
 
-    ● Phase 1 : Développer un site proposant le menu de 4 grands restaurants parisiens.
-    ● Phase 2 : Permettre la réservation en ligne et la composition de menus.
+Les éléments des menus apparaissent progressivement avec un décalage entre chaque étape. Les délais d’animation sont générés avec une boucle Sass `@for`.
 
-Fonctionnement
+### Sélection d’un plat
 
-Budget
-20 000 €
+Au survol d’un plat :
 
-Planning
-    ● Date de livraison de la première version du site : sous 1 mois.
+- son prix se déplace ;
+- une zone de validation turquoise apparaît depuis la droite ;
+- une coche confirme visuellement la sélection ;
+- les textes trop longs sont raccourcis avec des points de suspension.
 
-Technologies
-    ● Le développement doit se faire en CSS avec Sass, sans JavaScript.
-    ● Les fichiers sources .scss ainsi que le code compilé CSS doivent être disponibles
-        dans un ou plusieurs fichiers dédiés.
-    ● Le site devra être réalisé en adoptant le Mobile First, c’est-à-dire qu’il faudra d’abord
-        réaliser l'intégration de la maquette mobile, puis tablette, et enfin l'intégration du
-        responsive vers le desktop.
-    ● Aucun framework ne devra être utilisé (comme Bootstrap par exemple).
-    ● Aucun code CSS ne doit être appliqué via un attribut style dans une balise HTML.
-    ● Tout le code doit être versionné sur GitHub avec des commits réguliers pour
-        suivre l’avancement et publier le site en ligne plus facilement.
-    ● Le site devra être accessible sur GitHub une fois terminé.
+## Technologies utilisées
 
-4
+- HTML5
+- CSS3
+- Sass / SCSS
+- Flexbox
+- Media queries
+- Animations `@keyframes`
+- Transitions et transformations CSS
+- Font Awesome
+- Google Fonts — Roboto et Shrikhand
 
-_____________________________________________________________________________________________
+Le projet ne contient aucun framework et n’utilise pas JavaScript.
 
-Compatibilité
+## Identité graphique
 
-La cible étant les personnes connectées et pressées, le site sera développé en utilisant
-l’approche mobile-first.
-Le site devra donc être intégré en suivant les maquettes mobile, puis le responsive suivra
-pour les tablettes et ordinateurs en suivant les maquettes ordinateur données par notre
-designer.
+| Élément | Valeur |
+| --- | --- |
+| Couleur principale | `#9356DC` |
+| Couleur secondaire | `#FF79DA` |
+| Couleur tertiaire | `#99E2D0` |
+| Titres et logo | Shrikhand |
+| Textes | Roboto |
 
-    ● L’ensemble du site devra être responsive sur mobile, tablette et desktop.
-    ● Les pages devront passer la validation W3C en HTML et CSS sans erreur.
-    ● Le site doit être parfaitement compatible avec les dernières versions desktop de
-        Chrome et Firefox.
+## Responsive design
 
-Livrables attendus
+Le site a été développé selon une approche mobile first :
 
-🟣 Contenu des pages
+- les styles de base ciblent les écrans mobiles ;
+- à partir de `768px`, les cartes, les menus, le footer et les différentes sections adoptent une mise en page adaptée aux tablettes et aux ordinateurs ;
+- le contenu principal est limité en largeur sur les grands écrans afin de conserver une lecture confortable.
 
-Page d’accueil (x1)
-    ● Affichage de la localisation des restaurants. À terme, il sera possible de choisir sa
-        localisation pour trouver des restaurants proches d’un certain lieu.
-    ● Une courte présentation de l’entreprise.
-    ● Une section contenant les 4 menus sous forme de cartes. Au clic sur la carte,
-        l’utilisateur est redirigé vers la page du menu.
+## Branche du projet
 
-Pages de menu (x4)
-    ● 4 pages contenant chacune le menu d’un restaurant.
+- **`main`** : contient la version finalisée du site et les fichiers Sass compilés.
 
-Footer
-    ● Le footer est identique sur toutes les pages.
-    ● Au clic sur “Contact”, un renvoi vers une adresse mail est effectué.
+## Installation et lancement
 
-Header
-    ● Le header est présent sur toutes les pages.
-    ● Sur la page d’accueil, il contient le logo du site.
-    ● Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil.
+Le site est statique et ne nécessite aucune dépendance pour être consulté.
 
-5
+1. Clonez le dépôt :
 
-_____________________________________________________________________________________________
+```bash
+git clone <URL_DU_DEPOT>
+```
 
-🟣 Effets graphiques et animations
+2. Placez-vous dans le dossier du projet :
 
-Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils devront utiliser
-les animations ou transitions CSS, pas de JavaScript ni de librairie. Pour toutes les
-animations, afin de soigner le rendu du site, il est important que lorsque nous avons un effet
-au hover ou lors d’un clic, nous ayons l’effet inverse lorsque l’on quitte le survol.
+```bash
+cd Ohmyfood
+```
 
+3. Ouvrez `index.html` dans votre navigateur ou lancez-le avec **Live Server** dans Visual Studio Code.
 
-Boutons
-    ● Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir.
-        L’ombre portée devra également être plus visible.
-    ● À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un
-        bouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il devra se
-        remplir progressivement. Pour cette première version, l’effet peut apparaître au
-        survol sur desktop au lieu du clic.
+## Compilation Sass
 
-Page d’accueil
-    ● Quand l’application aura plus de menus, un “loader” sera nécessaire. Sur cette
-        maquette, nous souhaitons en avoir un aperçu. Il devra apparaître pendant 1 à 3
-        secondes quand on arrive sur la page d'accueil, couvrir l'intégralité de l'écran, et
-        utiliser les animations CSS (pas de librairie). Le design de ce loader n’est pas défini,
-        toute proposition est donc la bienvenue tant qu’elle est cohérente avec la charte
-        graphique du site.
+Le fichier CSS compilé est déjà inclus dans le dépôt. Pour modifier les sources SCSS, Sass doit être installé sur votre machine.
 
-Pages de menu
-    ● À l’arrivée sur la page, les plats devront apparaître progressivement avec un léger
-        décalage dans le temps. Ils pourront apparaître soit un par un, soit par groupe
-        “Entrée”, “Plat” et “Dessert”.
-    ● Le visiteur peut ajouter les plats qu'il souhaite à sa commande en cliquant dessus.
-        Cela fait apparaître une petite coche à droite du plat. Cette coche devra coulisser de
-        la droite vers la gauche. Pour cette première version, l’effet peut apparaître au survol
-        sur desktop au lieu du clic. Si l’intitulé du plat est trop long, il devra être rogné avec
-        des points de suspension.
+Compilation unique :
 
-        6
+```bash
+sass sass/main.scss sass/main.css
+```
+
+Compilation automatique pendant le développement :
+
+```bash
+sass --watch sass/main.scss:sass/main.css
+```
+
+## Structure du projet
+
+```text
+Project-3-Ohmyfood/
+├── assets/                    # Logo, icônes et illustrations SVG
+├── restaurants/               # Photographies des restaurants
+├── sass/
+│   ├── _base.scss             # Styles globaux et typographie
+│   ├── _button.scss           # Boutons et animation des cœurs
+│   ├── _footer.scss           # Pied de page
+│   ├── _header.scss           # En-tête et navigation
+│   ├── _index.scss            # Page d’accueil et loader
+│   ├── _menu.scss             # Pages de restaurant et animations
+│   ├── _variables.scss        # Variables du design system
+│   ├── main.scss              # Point d’entrée Sass
+│   └── main.css               # Feuille de style compilée
+├── index.html                 # Page d’accueil
+├── a_la_francaise.html        # Menu À la française
+├── la_note_enchantee.html     # Menu La note enchantée
+├── la_palette_du_gout.html    # Menu La palette du goût
+└── le_delice_des_sens.html    # Menu Le délice des sens
+```
+
+## Compétences travaillées
+
+- intégrer une maquette avec HTML et CSS ;
+- développer une interface selon l’approche mobile first ;
+- créer une navigation entre plusieurs pages ;
+- organiser et maintenir des styles avec Sass ;
+- utiliser des variables, l’imbrication et les boucles Sass ;
+- concevoir des animations avec `@keyframes` ;
+- créer des transitions et des effets interactifs sans JavaScript ;
+- adapter une interface aux différentes tailles d’écran ;
+- respecter une identité graphique sur l’ensemble d’un site.
+
+## Contexte
+
+Projet pédagogique réalisé dans le cadre de la formation **Intégrateur Web** d’OpenClassrooms.
